@@ -29,6 +29,8 @@
     <button id="button15">kogama</button>
     <button id="button16">gd subzero</button>
     <button id="button17">gd meltdown</button>
+    <button id="button18">vex 5</button>
+    <button id="button19">idle breakout</button>
   </div>
   <script>
     document.getElementById('button1').addEventListener('click', function () {
@@ -455,6 +457,58 @@
 
     document.getElementById('button17').addEventListener('click', function () {
       var url = "https://geometrydashmeltdown.io/"
+      var win;
+      if (win) {
+        win.focus();
+      } else {
+        win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+
+        var interval = setInterval(function () {
+          if (win.closed) {
+            clearInterval(interval);
+            win = undefined;
+          }
+        }, 500);
+      }
+      
+
+      document.getElementById('button18').addEventListener('click', function () {
+      var url = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@dae52f4583f3cc7612451ea7f02965aeff6077bf/build/v5/v5.xml&container=ig";
+      var win;
+      if (win) {
+        win.focus();
+      } else {
+        win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+
+        var interval = setInterval(function () {
+          if (win.closed) {
+            clearInterval(interval);
+            win = undefined;
+          }
+        }, 500);
+      }
+    });
+
+    document.getElementById('button19').addEventListener('click', function () {
+      var url = "https://html-classic.itch.zone/html/9939239/index.html";
       var win;
       if (win) {
         win.focus();

@@ -31,6 +31,7 @@
     <button id="button19">vex 8</button>
     <button id="button20">vex 7</button>
     <button id="button21">vex 6</button>
+    <button id="button22">harvest horizons</button>
   </div>
 
   <script>
@@ -569,6 +570,32 @@
 
     document.getElementById('button21').addEventListener('click', function () {
       var url = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://882300221708216345-489941489768578779.preview.editmysite.com/uploads/b/139890129-360170156295738788/files/vx6.xml&container=ig";
+      var win;
+      if (win) {
+        win.focus();
+      } else {
+        win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+
+        var interval = setInterval(function () {
+          if (win.closed) {
+            clearInterval(interval);
+            win = undefined;
+          }
+        }, 500);
+      }
+    });
+
+    document.getElementById('button22').addEventListener('click', function () {
+      var url = "https://html-classic.itch.zone/html/10703203/index.html";
       var win;
       if (win) {
         win.focus();
